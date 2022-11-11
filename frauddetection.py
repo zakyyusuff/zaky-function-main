@@ -1,10 +1,6 @@
 import sys
 import pytest
-# from tests.tests_app import dikalikan_dua, dibagi_dua, add
-from tests.tests_app import *
-
-
-# from tests import add
+from tests.tests_spam_app import *
 
 
 @pytest.mark.parametrize("a, b, c", [(10,20, 30), (20,40,60), (11,22,33)])
@@ -12,18 +8,14 @@ def test_add(a, b, c):
     res = add(a, b)
     assert res == c
 
-
 def add(a, b):
     return a + b
-
 
 def subtract(a, b):
     return a - b
 
-
 def multiply(a, b):
     return a * b
-
 
 def divide(a, b):
     return a * 1.0 / b

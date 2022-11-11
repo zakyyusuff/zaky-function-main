@@ -1,5 +1,5 @@
 import pytest
-from main import *
+from frauddetection import multiply, divide
 
 @pytest.fixture
 def numbers():
