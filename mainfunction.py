@@ -6,6 +6,7 @@ def numbers():
     b = 5
     return [a,b]
 
+@pytest.mark.difficult_operation
 def multiply(a, b):
     return a * b
 
