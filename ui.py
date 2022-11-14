@@ -1,10 +1,9 @@
 import sys
-from mainfunction import dikalikan_dua, dibagi_dua
+from mainfunction import dikalikan_dua
 
 def main():
     num = int(input("masukan angka: "))
     print("kelipatan dari %d adalah %d" % (num, dikalikan_dua(num)))
-    print("setengah dari %d adalah %d" % (num, dibagi_dua(num)))
     sys.exit(0)
 
 
