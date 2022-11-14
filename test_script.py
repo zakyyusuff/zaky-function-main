@@ -1,6 +1,5 @@
 import sys
 from mainfunction import dikalikan_dua, dibagi_dua
-# from mainfunction import test_kali, test_bagi
 
 def main():
     num = int(input("masukan angka: "))

@@ -1,5 +1,4 @@
 import mainfunction as min
-# import pytest
 from mainfunction import numbers
 
 class TestApp:
