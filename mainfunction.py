@@ -1,5 +1,11 @@
 import pytest
 
+@pytest.fixture
+def numbers():
+    a = 10
+    b = 20
+    return [a,b]
+
 def test_add(a, b, c):
     res = add(a, b)
     assert res == c
@@ -16,11 +22,6 @@ def multiply(a, b):
 def divide(a, b):
     return a * 1.0 / b
 
-@pytest.fixture
-def numbers():
-    a = 10
-    b = 20
-    return [a,b]
 
 def dikalikan_dua(x):
     return multiply(x, 2)
