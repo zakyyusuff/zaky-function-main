@@ -1,6 +1,6 @@
-import sys
+# import sys
 import pytest
-from tests.tests_spam_app import *
+# from tests.tests_spam_app import dikalikan_dua, dibagi_dua
 
 
 @pytest.mark.parametrize("a, b, c", [(10,20, 30), (20,40,60), (11,22,33)])
@@ -20,6 +20,17 @@ def multiply(a, b):
 def divide(a, b):
     return a * 1.0 / b
 
+@pytest.fixture
+def numbers():
+    a = 10
+    b = 20
+    return [a,b]
+
+def dikalikan_dua(x):
+    return multiply(x, 2)
+
+def dibagi_dua(x):
+    return divide(x, 2)
 
 @pytest.mark.easy_operation
 def test_add():
@@ -41,13 +52,3 @@ def test_divide():
     # pembagian
     assert divide(21, 3) == 7
 
-
-def main():
-    num = int(input("masukan angka: "))
-    print("kelipatan dari %d adalah %d" % (num, dikalikan_dua(num)))
-    print("setengah dari %d adalah %d" % (num, dibagi_dua(num)))
-    sys.exit(0)
-
-
-if __name__ == "__main__":
-    main()

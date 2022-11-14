@@ -1,23 +1,14 @@
-import pytest
-from frauddetection import multiply, divide
-
-@pytest.fixture
-def numbers():
-    a = 10
-    b = 20
-    return [a,b]
-
-def dikalikan_dua(x):
-    return multiply(x, 2)
-
-def dibagi_dua(x):
-    return divide(x, 2)
+import mainfunction as min
+# import pytest
+from mainfunction import numbers
 
 class TestApp:
-    def test_multiplication(self, numbers):
-        res = dikalikan_dua(numbers[0])
+    # @pytest.mark.easy_operation
+    def test_kali(self, numbers):
+        res = min.dikalikan_dua(numbers[0])
         assert res == numbers[1]
 
-    def test_division(self, numbers):
-        res = dibagi_dua(numbers[1])
+    # @pytest.mark.easy_operation
+    def test_bagi(self, numbers):
+        res = min.dibagi_dua(numbers[1])
         assert res == numbers[0]
